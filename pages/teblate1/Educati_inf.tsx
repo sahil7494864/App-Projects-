@@ -14,9 +14,9 @@ const EducationForm = ({navigation}) => {
   const handleInputChange = (index, field, value) => {
     const updatedList = [...educationList];
     updatedList[index][field] = value;
-    setEducationList(updatedList); // Update local state
+    setEducationList(updatedList);  
 
-    // Also update the global context state
+    
     
   };
 
@@ -24,22 +24,22 @@ const EducationForm = ({navigation}) => {
     const newEducation = { institution: '', degree: '', startYear: '', endYear: '',CGPA:'', };
     const updatedList = [...educationList, newEducation];
     setEducationList(updatedList);
-    // Update global context
+   
   };
 
   const removeEducation = (index) => {
     const updatedList = educationList.filter((_, i) => i !== index);
     setEducationList(updatedList);
-   // Update global context 
+ 
   };
 
   const handleSubmit = () => {
     
-    Alert.alert('Details Submitted Succssfully');// Update global context with the experience data
+    Alert.alert('Details Submitted Succssfully'); 
     setEducationDetails(educationList);
   
 
-    // Here you can submit the education data to the server or save it somewhere
+ 
   };
  
   return (

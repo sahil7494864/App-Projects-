@@ -1,15 +1,15 @@
-// screens/Language.js
+ 
 import React, { useContext, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { MultipleSelectList } from 'react-native-dropdown-select-list';
 import { useNavigation } from 'expo-router';
 import Eyeicon from '@/components/resumeprj/Eyeicon';
 import { ResumeContext } from '@/context/Resumecontext';
-  // Import ResumeContext
+   
 
 export default function Language() {
   const [selected, setSelected] = useState([]);
-  const { setLanguages } = useContext(ResumeContext);  // Access setLanguages from context
+  const { setLanguages } = useContext(ResumeContext);  
 
   const Language = [
     { key: 1, value: 'English' },
@@ -27,10 +27,10 @@ export default function Language() {
 
   const navigation = useNavigation();
 
-  // When the user selects languages, update the global context
+ 
   const handleLanguageChange = (val) => {
-    setSelected(val);  // Update local state
-    setLanguages(val);  // Update global context
+    setSelected(val);   
+    setLanguages(val);   
   };
 
   return (

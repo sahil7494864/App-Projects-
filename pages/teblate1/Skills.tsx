@@ -7,19 +7,19 @@ import { View, Text, TextInput, Button, StyleSheet,TouchableOpacity} from 'react
 const SkillsForm = () => {
   const { skills, setSkills } = useContext(ResumeContext);  
    
-  // Add a new skill to the list
+ 
   const addSkill = () => {
-    setSkills([...skills, '']); // Add an empty skill to the array
+    setSkills([...skills, '']);  
   };
 
-  // Update a specific skill
+   
   const updateSkill = (index, value) => {
     const updatedSkills = [...skills];
     updatedSkills[index] = value;
     setSkills(updatedSkills);
   };
 
-  // Remove a skill from the list
+  
   const removeSkill = (index) => {
     setSkills(skills.filter((_, i) => i !== index));
   };
@@ -30,7 +30,7 @@ const navigation=useNavigation();
        <Eyeicon/>
       <Text style={styles.title}>Enter Your Skills</Text>
 
-      {/* List of Skills */}
+      
       {skills.map((skill, index) => (
         <View key={index} style={styles.skillContainer}>
           <TextInput
@@ -46,11 +46,9 @@ const navigation=useNavigation();
           />
         </View>
       ))}
-
-      {/* Add New Skill Button */}
+ 
       <Button title="Add Skill" onPress={addSkill} />
-
-      {/* Debugging Output */}
+ 
       <Text style={styles.output}>Skills: {JSON.stringify(skills)}</Text>
       
 

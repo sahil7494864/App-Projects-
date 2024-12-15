@@ -1,8 +1,8 @@
-// screens/Experience.js
+ 
 import React, { useContext, useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, ScrollView, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation } from 'expo-router';
- // Import ResumeContext
+ 
 import Eyeicon from '@/components/resumeprj/Eyeicon';
 import { ResumeContext } from '@/context/Resumecontext';
 
@@ -11,7 +11,7 @@ const Experience = () => {
     { Job_Title: '', Company_Name: '', startYear: '', endYear: '', City: '', Description: '' },
   ]);
 
-  const { setExperience } = useContext(ResumeContext); // Access setExperience function from context
+  const { setExperience } = useContext(ResumeContext);  
   const navigation = useNavigation();
 
   const handleInputChange = (index, key, value) => {
@@ -33,9 +33,9 @@ const Experience = () => {
   };
 
   const handleSubmit = () => {
-    setExperience(experienceList); // Update global context with the experience data
+    setExperience(experienceList);  
    Alert.alert('Details Submitted Succssfully')
-    // You can also send this data to a server or save locally
+     
   };
 
   return (

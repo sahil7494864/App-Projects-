@@ -14,8 +14,8 @@ const Hobbies = () => {
     const navigation = useNavigation();
 
     const handleHobbiesChange = (val) => {
-        setSelected(val);  // Update local state
-        setHobbies(val);  // Update global context
+        setSelected(val);  
+        setHobbies(val);   
       };
 
     return (

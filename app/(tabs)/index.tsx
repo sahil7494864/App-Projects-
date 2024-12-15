@@ -23,7 +23,7 @@ const Stack = createNativeStackNavigator();
 
 const index = () => {
   return (
-    <ResumeProvider> 
+  <ResumeProvider> 
       
   <Stack.Navigator screenOptions={{headerStyle:{backgroundColor:'#00edd9'}}}>
   
